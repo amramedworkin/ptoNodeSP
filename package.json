@@ -1,0 +1,21 @@
+{
+  "name": "nodesp",
+  "version": "1.0.0",
+  "description": "Test node sharepoint stuff",
+  "main": "index.js",
+  "scripts": {
+    "lint":"eslint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amram E. Dworkin <amram.dworkin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gd-sprest": "^6.5.3",
+    "node-sp-auth": "^3.0.4",
+    "request-promise": "^4.2.6",
+    "xlsx": "^0.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
