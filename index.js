@@ -9,6 +9,8 @@ const ptoUtils = require('./ptoUtils')
 const ptoFindServers = require('./FindServersNSLookup')
 const ptoFindComponents = require('./FindComponentinPML')
 const ptoMatch = require('./ptoMatchFns')
+const ptoServerSw = require('./ServerSWUpdates')
+
 String.prototype.left = function(n) {
     return this.substring(0, n);
 }
@@ -60,7 +62,8 @@ try
 	ptoMatch.CheckManual(tables['ecmo'],tables['manual'])
 	ptoMatch.DiamondCheck(tables['ecmo'],tables['diamond'])
 	ptoFindComponents.FindComponentinPML(tables)
-  ptoFindServers.FindServersNSLookup(tables)
+	ptoServerSw.ServerSWUpdates(tables)
+	ptoFindServers.FindServersNSLookup(tables)
 } catch(err) {
 	console.error(2,err)
 }
